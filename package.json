@@ -1,0 +1,29 @@
+{
+  "name": "shelby-neubeck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "keystone": "^4.0.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1",
+    "dotenv": "^6.2.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "compile": "webpack --config webpack.config.js",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
