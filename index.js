@@ -10,6 +10,7 @@ keystone.init({
   // Paths to our application static files
   'static': [
     './server/public/js/',
+    './server/public/css/',
     './server/public/img/',
   ],
 	'emails': 'templates/emails',
@@ -32,12 +33,12 @@ keystone.init({
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
-// keystone.set('locals', {
-// 	_: require('lodash'),
-// 	env: keystone.get('env'),
-// 	utils: keystone.utils,
-// 	editable: keystone.content.editable,
-// });
+keystone.set('locals', {
+	_: require('lodash'),
+	env: keystone.get('env'),
+	utils: keystone.utils,
+	editable: keystone.content.editable,
+});
 
 // Load your project's Models
 keystone.import('./server/models');

@@ -33,7 +33,21 @@ exports.get = (req, res) => {
         return;
       };
       response.education = eduResult;
-      res.apiResponse(response);
+      list(Experience.model, (err, workResult) => {
+        if (err) {
+          res.apiError(err);
+          return;
+        };
+        response.work = workResult;
+        list(Project.model, (err, projResult) => {
+          if (err) {
+            res.apiError(err);
+            return;
+          };
+          response.projects = projResult;
+          res.apiResponse(response);
+        });
+      });
     });
   });
 };
