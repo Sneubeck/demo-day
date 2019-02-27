@@ -11,7 +11,7 @@ For this project, I used:
   * I also used [react-router](https://reacttraining.com/react-router/web/guides/philosophy) and followed their tutorial [here](https://reacttraining.com/react-router/web/example/basic)
 * [KeystoneJS](https://keystonejs.com/)
   * I saw KeystoneJS when I was looking for CMSs but I didn't know enough about JavaScript in order to use it. Keystone basically lets me create my own admin panel in code.
-  * Apparently it's hard to use react with keystone, so I followed a tutorial: [this one](https://medium.com/@victor36max/how-to-build-a-react-driven-blog-with-next-js-and-keystonejs-cae3cd9fb804)
+  * Apparently it's hard to use react with keystone, so I followed a tutorial: [this one](https://itnext.io/building-a-node-cms-with-keystonejs-mongo-db-react-and-redux-part-i-ae5958496df2)
 * FontAwesome
 * keystone uses mongodb, which is a javascript database
 
