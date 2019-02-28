@@ -22,8 +22,7 @@ class ResumeEducation extends React.Component {
         </div>
         <div className='education-content'>
           <h3>{this.props.name}</h3>
-          <div><span>Started: </span><span>{`${months[startAtDate.getMonth()]} ${startAtDate.getFullYear()}`}</span></div>
-          <div style={{display: this.props.endAt ? 'inline' : 'none' }}><span>Ended: </span><span>{`${months[endAtDate.getMonth()]} ${endAtDate.getFullYear()}`}</span></div>
+          <h4>{this.props.fieldOfStudy}</h4>
           <div className='content' dangerouslySetInnerHTML={{__html: this.props.description}}></div>
         </div>
       </div>
@@ -134,7 +133,7 @@ class Resume extends React.Component {
           <h3>Education</h3>
         {this.state.education.map((item, i) => {
           return (
-            <ResumeEducation key={i} name={item.name} slug={item.slug} startAt={item.startAt} endAt={item.endAt} />
+            <ResumeEducation fieldOfStudy={item.fieldOfStudy} description={item.description} key={i} name={item.name} slug={item.slug} startAt={item.startAt} endAt={item.endAt} />
           )
         })}
         </div>
