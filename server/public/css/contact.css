@@ -5,7 +5,8 @@
 
 .input-group{
   max-width: 600px;
-  margin: 0 auto;
+  margin: 5px auto;
+  padding: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -23,10 +24,14 @@
 
 .input-group input,
 .input-group textarea {
-  padding: 3px;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  border: 1px solid #e8e8e8;
 }
 
-.input-group input[type="submit"] {
+.input-group button[type="submit"] {
+  max-height: 40px;
   max-width: 350px;
   padding: 5px;
   background-color: var(--color-primary-1);
@@ -36,4 +41,15 @@
   border: none;
   border-radius: 3px;
   margin: 0 0 0 auto;
+}
+
+.input-group.error input {
+  border: 1px solid red;
+}
+
+.input-group .error-inline {
+  font-weight: 300;
+  font-size: .7rem;
+  color: red;
+  padding: 5px;
 }

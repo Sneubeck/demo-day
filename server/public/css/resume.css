@@ -7,26 +7,47 @@
 .resume-container {
   max-width: var(--page-max-width);
   margin: 0 auto;
-}
-
-.work.resume-container {
   display: flex;
   flex-direction: column;
 }
 
-.work-container {
+.work.resume-container,
+.education.resume-container,
+.project.resume-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-container,
+.project-container,
+.education-container {
   display: flex;
   flex-direction: row;
   margin: 8px 0px;
 }
 
-.work-container .work-icon {
+.work-container .work-icon,
+.education-container .education-icon,
+.project-container .project-icon {
   flex: 1;
-  border-right: 2px solid var(--color-primary-1);
   margin-right: 10px;
 }
 
-.work-container .work-content {
+.work-container .work-icon {
+  border-right: 2px solid var(--color-primary-1);
+}
+
+.education-container .education-icon {
+  border-right: 2px solid var(--color-primary-3);
+}
+
+.project-container .project-icon {
+  border-right: 2px solid var(--color-primary-2);
+}
+
+.work-container .work-content,
+.education-container .education-content,
+.project-container .project-content {
   background-color: white;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
@@ -34,4 +55,19 @@
   flex: 7;
   flex-direction: column;
   display: flex;
+}
+
+.skills.resume-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.skill {
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
 }

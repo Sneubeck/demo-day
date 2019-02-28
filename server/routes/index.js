@@ -18,6 +18,7 @@ const renderFrontend =  () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 			</head>
       <body>
         <div class="react-container">
@@ -37,6 +38,7 @@ const httpRenderFrontend = (req, res) => {
 exports = module.exports = function (app) {
     // Get access to the API route in our app
     app.get('/api/resume/', keystone.middleware.api, routes.api.resume.get);
+    app.post('/api/contact', keystone.middleware.api, routes.api.contact.post);
     // Set up the default app route to  http://localhost:3000/index.html
     app.get('*', httpRenderFrontend);
 };

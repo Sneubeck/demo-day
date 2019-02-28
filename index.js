@@ -14,6 +14,7 @@ keystone.init({
     './server/public/img/',
   ],
 	'emails': 'templates/emails',
+	'view engine': 'pug',
   // Keystone includes an updates framework,
   // which you can enable by setting the auto update option to true.
   // Updates provide an easy way to seed your database,
