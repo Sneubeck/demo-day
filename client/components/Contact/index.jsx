@@ -139,29 +139,29 @@ class Contact extends React.Component {
         <div className={`input-group ${this.state.name.error ? 'error' : ''}`}>
           <span className='error-inline'>{this.state.name.error}</span>
           <label>Name*</label>
-          <input value={this.state.name.value} onChange={this.handleNameChange.bind(this)} name="name" className="" />
+          <input disabled={this.state.success} value={this.state.name.value} onChange={this.handleNameChange.bind(this)} name="name" className="" />
         </div>
         <div className={`input-group ${this.state.email.error ? 'error' : ''}`}>
           <span className='error-inline'>{this.state.email.error}</span>
           <label>Email*</label>
-          <input value={this.state.email.value} onChange={this.handleEmailChange.bind(this)} name="email" className="" />
+          <input disabled={this.state.success} value={this.state.email.value} onChange={this.handleEmailChange.bind(this)} name="email" className="" />
         </div>
         <div className={`input-group ${this.state.subject.error ? 'error' : ''}`}>
           <span className='error-inline'>{this.state.subject.error}</span>
           <label>Subject*</label>
-          <input value={this.state.subject.value} onChange={this.handleSubjectChange.bind(this)} name="subject" className="" />
+          <input disabled={this.state.success} value={this.state.subject.value} onChange={this.handleSubjectChange.bind(this)} name="subject" className="" />
         </div>
         <div className={`input-group ${this.state.message.error ? 'error' : ''}`}>
           <span className='error-inline'>{this.state.message.error}</span>
           <label>Message*</label>
-          <textarea value={this.state.message.value} onChange={this.handleMessageChange.bind(this)} name="message" className="" />
+          <textarea disabled={this.state.success} value={this.state.message.value} onChange={this.handleMessageChange.bind(this)} name="message" className="" />
         </div>
         <div className={`input-group submit`}>
           <Recaptcha
             sitekey="6LeFb5QUAAAAAJUXQ_2qHhqbeodIXF9PoxPXeP_l"
             onChange={this.handleVerify.bind(this)}
           />
-          <button disabled={this.state.success.value} type="submit">Submit</button>
+          <button disabled={this.state.success} type="submit">Submit</button>
         </div>
       </form>
     );
