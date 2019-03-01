@@ -71,7 +71,7 @@ main {
 
 .rows {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: ;
   flex-wrap: wrap;
 }
 .row {
@@ -88,9 +88,11 @@ main {
 .row.intro {
   flex: 2;
   padding: 5px;
+  min-width: 300px;
 }
 
 .row.face {
+  display: flex;
   padding: 15px;
   flex: 1;
   border-radius: 25px;
